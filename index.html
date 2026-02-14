@@ -168,9 +168,9 @@
       background: linear-gradient(180deg, var(--red), var(--red2));
       color:white;
       box-shadow: 0 12px 24px rgba(239,68,68,.22);
-      position:absolute; /* so we can move it */
+      /* position:absolute; 
       left:50%;
-      transform: translateX(60px); /* initial offset */
+      transform: translateX(60px); */
     }
 
     .hint{
@@ -329,27 +329,27 @@
     statusEl.textContent = (state.scene === scenes.length-1) ? "Locked In ✅" : "Choose wisely…";
   }
 
-  function resetNoPosition(){
-    // Put the NO button in a consistent starting place inside the row
+ function resetNoPosition(){
+    //Put the NO button in a consistent starting place inside the row
     noBtn.style.left = "50%";
     noBtn.style.top = "0px";
-    noBtn.style.transform = "translateX(60px)";
+    
   }
 
-  function moveNoButtonRandom(){
+//   function moveNoButtonRandom(){
 
-  const rowRect = btnRow.getBoundingClientRect();
+//   const rowRect = btnRow.getBoundingClientRect();
 
-  const maxX = rowRect.width - noBtn.offsetWidth;
-  const maxY = rowRect.height - noBtn.offsetHeight;
+//   const maxX = rowRect.width - noBtn.offsetWidth;
+//   const maxY = rowRect.height - noBtn.offsetHeight;
 
-  const x = Math.random() * maxX;
-  const y = Math.random() * maxY;
+//   const x = Math.random() * maxX;
+//   const y = Math.random() * maxY;
 
-  noBtn.style.left = x + "px";
-  noBtn.style.top = y + "px";
-  noBtn.style.transform = "none";
-}
+//   noBtn.style.left = x + "px";
+//   noBtn.style.top = y + "px";
+//   noBtn.style.transform = "none";
+// }
 
 
   function shake(){
@@ -481,4 +481,3 @@
 </script>
 </body>
 </html>
-
